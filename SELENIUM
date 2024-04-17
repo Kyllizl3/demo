@@ -1,0 +1,81 @@
+insert time
+from selenium import webdriver
+#biblioteka do naciskania klawisz w tym przypadku enter
+from selenium.webdriver.common.keys import
+
+#inicjalizacja przegladarki Chrome 
+driver = webdriver.Chrome()
+
+#Otwarcie okna przegladarki 
+driver.get("https://www.google.com")
+
+#Ile czasu potrzeba aby te okno sie pojawilo
+time.sleep(5)
+
+#Zakoncz dzialanie przegladarki
+driver.quit()
+
+
+
+#albo 
+
+import time 
+from selenium import webdriver
+
+#inicjalizacja przegladarki Chrome
+
+driver = webdriver.Chrome()
+
+#  url = "https://www.google.com"
+new_url = "https://www.wp.pl"
+
+#otwarcie okna przegadarki 
+driver.get(url)
+
+#Sterowanie rozmiarem przegladarki
+driver.aximize_window()
+
+#Otwarcie nowej zakladki 
+driver.execute_scrippt("window.open('');")
+
+#Przelaczenie do okna
+driver.switch_to window(driver.windown_handles[1])
+driver.get(new_url)
+
+#Zamyka wszystko 
+driver.quit()
+
+#Zamyka jedna zakladke
+driver.close()
+
+#Znajdz element 'akceptuj zgody' za pomoca xpath
+accept = driver.find_elements('xpath', '//*[@id53Lk57G/div')
+accept.click()
+
+#Znajdz pole do wpisania hasla "pogoda"
+search_box = driver.find_element('id', '//"33id:367gd6j3"')
+
+#Wpisuje 'pogoda' w boxa
+search_boox.send_keys('pogoda')
+
+#Nacisniecie Enter
+search_box.send_keys(Keys.ENTER)
+
+
+time.sleep(15)
+
+#Zakoncz dzialanie przegladarki
+driver.execute_script("window.open('');")
+
+
+
+
+
+
+
+
+
+
+
+
+
