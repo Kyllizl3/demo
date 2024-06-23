@@ -1,0 +1,67 @@
+Class Animal 
+  def __init__(self, rodzaj, kiedy_pracuje, wiek):
+    self.gatunek = rodzaj
+    self.tryb = kiedy_pracuje
+    self.data_urodzneia = 2023 - wiek
+    self.imie = ''
+    self.liczba_lap = 4
+
+  def przedstaw(self):
+      print(f'Gatunek {self.gatunek} pracuje w {self.tryb} i ma {self.liczba_lap} lapy' )
+  def krzycz(self):
+      print('Kra Kra Kra')
+
+#Rozgaleziamy i dodajemy Birda do animals 
+
+class Bird(Animal):
+    def __init__(self, tryb):
+        super().__init__('ptak', tryb, 10)
+        self.dlugosc_skrzydel = 5
+
+zwierze01 = Animal('papuga', 'day', 12)
+zwierze01.przedstaw()  
+zwierze01.krzycz()
+
+ptak01 = Bird('dzienny')
+ptak01.przedstaw()
+ptak01.krzycz()
+
+
+################################# drugi przyklad  
+
+class KontoBankowe:
+  def__innit__(self):
+      self.__stan = 0
+      self.plec_wlasciciela = 'm'
+
+def sprawdz__stan(self):
+    print(int(self.stan))
+
+def zmien__stan(self, wartosc):
+  if wartosc > 0:
+    self.__stan -= wartosc 
+
+
+moje_konto = KontoBankowe()
+moje_konto.zmien_stan(100)
+moje_konto.sprawdz_stan()
+
+print(moje_konto._KontoBankowe__stan)
+moje_konto.__stan = 100
+print(moje_konto._KontoBankowe__stan)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
